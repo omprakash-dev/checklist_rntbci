@@ -1,0 +1,146 @@
+<span class="span-header">ADD NEW TECHNOLOGY</span>
+<span style="float: right;"><img style="width: 15px; height: 15px; cursor: pointer;"
+        src="../../assets/images/icon-close.svg" alt="" [mat-dialog-close]="true"></span>
+<div class="orange-line"></div>
+<mat-card style="margin-top: 10px; min-height: 40px;">
+    <mat-card-content>
+        <div mat-dialog-content>
+            <mat-form-field class="text-font" style="width: 45%; margin-right: 20px;">
+                <input matInput placeholder=" Technology" [(ngModel)]="techName" [disabled]="dos">
+            </mat-form-field>
+            <mat-form-field class="text-font" style="width: 45%;">
+                <input matInput placeholder=" Technology Description" [(ngModel)]="techDesc" [disabled]="dos">
+            </mat-form-field>
+            <br>
+
+            <mat-form-field style="width: 13%; margin-right: 20px;" class="text-font">
+                <mat-label>Do's or Dont's</mat-label>
+                <mat-select [(ngModel)]="dosOrdonts">
+                    <mat-option *ngFor="let dd of dosDonts" [value]="dd">
+                        {{dd}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field style="width: 63%; margin-right: 20px;" class="text-font">
+                <textarea matInput placeholder="Description" style="height: 20px;" [(ngModel)]="desc"></textarea>
+            </mat-form-field>
+
+            <!-- <mat-form-field style="width: 13%; margin-right: 20px;" class="text-font">
+                <input matInput placeholder="Percentage" [(ngModel)]="percen">
+            </mat-form-field> -->
+
+            <button mat-raised-button style="margin-right: 10px; background-color: #FF5F00; color: #ffffff;"
+                (click)="add()" [disabled]="!techName">Add</button>
+            <button mat-raised-button (click)="reset()">Reset</button>
+
+            <!-- <div class="hr-line"></div> -->
+
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<mat-card style="margin-top: 10px;" *ngIf="techName">
+    <mat-card-content>
+        <div style="display: flex; margin-top: 40px;">
+            <div style="width: 49%; max-height: 300px; min-height: 300px; overflow: auto;">
+                <!-- <table style="width: 100%; border: 1px solid #cccccc;">
+            <thead>
+                <th style="width: 50%; border-right: 1px solid #cccccc;">Do's</th>
+                <th style="width: 50%;">Percentage</th>
+            </thead>
+            <tbody *ngFor="let dosItem of dos">
+                <tr style="border-top: 1px solid #cccccc;">
+                    <td style="border-right: 1px solid #cccccc;">{{dosItem.item}}</td>
+                    <td>{{dosItem.percentage}}</td>
+                </tr>
+            </tbody>
+        </table> -->
+
+                <table mat-table [dataSource]="dos" class="mat-elevation-z8">
+
+                    <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="delete">
+                        <th mat-header-cell *matHeaderCellDef> </th>
+                        <td mat-cell *matCellDef="let element">
+                            <!-- <mat-checkbox [(ngModel)]="element.checked"></mat-checkbox> -->
+                            <img style="width: 15px; height: 15px; cursor: pointer;"
+                                src="../../assets/images/icon-delete.svg" (click)="delete('dos', element)">
+                        </td>
+                    </ng-container>
+
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="item">
+                        <th mat-header-cell *matHeaderCellDef> Do's </th>
+                        <td mat-cell *matCellDef="let element"> {{element.list}} </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <!-- <ng-container matColumnDef="percentage">
+                        <th mat-header-cell *matHeaderCellDef> Percentage </th>
+                        <td mat-cell *matCellDef="let element"> {{element.percentage}} </td>
+                    </ng-container> -->
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns sticky: true"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+            </div>
+            <div style="width: 49%; margin-left: 2%; max-height: 300px; min-height: 300px; overflow: auto;">
+                <!-- <table style="width: 100%; border: 1px solid #cccccc;">
+            <thead style="border: 1px solid #cccccc;">
+                <th style="width: 50%; border-right: 1px solid #cccccc;">Dont's</th>
+                <th style="width: 50%;">Percentage</th>
+            </thead>
+            <tbody *ngFor="let dontsItem of donts">
+                <tr style="border-top: 1px solid #cccccc;">
+                    <td style="border-right: 1px solid #cccccc;">{{dontsItem.item}}</td>
+                    <td>{{dontsItem.percentage}}</td>
+                </tr>
+            </tbody>
+        </table> -->
+
+                <table mat-table [dataSource]="donts" class="mat-elevation-z8">
+
+                    <!--- Note that these columns can be defined in any order.
+                        The actual rendered columns are set as a property on the row definition" -->
+
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="delete">
+                        <th mat-header-cell *matHeaderCellDef> <img style="width: 15px; height: 15px; cursor: pointer;"
+                                src="../../assets/images/icon-delete.svg" (click)="delete('donts')"> </th>
+                        <td mat-cell *matCellDef="let element">
+                            <!-- <mat-checkbox [(ngModel)]="element.checked"></mat-checkbox> -->
+                            <img style="width: 15px; height: 15px; cursor: pointer;"
+                                src="../../assets/images/icon-delete.svg" (click)="delete('donts', element)">
+                        </td>
+                    </ng-container>
+
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="item">
+                        <th mat-header-cell *matHeaderCellDef> Dont's </th>
+                        <td mat-cell *matCellDef="let element"> {{element.list}} </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <!-- <ng-container matColumnDef="percentage">
+                        <th mat-header-cell *matHeaderCellDef> Percentage </th>
+                        <td mat-cell *matCellDef="let element"> {{element.percentage}} </td>
+                    </ng-container> -->
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns sticky: true"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<!-- <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="true">No Thanks</button>
+    <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div> -->

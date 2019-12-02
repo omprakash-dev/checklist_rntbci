@@ -1,0 +1,14 @@
+<span class="nav-bar">
+  <img src="../assets/images/alliance_icon.svg" class="logo">
+  <!-- <img src="../../assets/images/user.svg" class="user"> -->
+  <span class="test header">Check List</span>
+  <img src="../assets/images/icon-home.svg" style="width: 20px; height: 20px; margin-right: 80px;" [routerLink]="['/']"
+    class="user" title="Home">
+  <img src="../assets/images/icon-config.svg" title="Check list config"
+    style="width: 20px; height: 20px; margin-right: 40px;" [routerLink]="['/displayTechCheckList']" class="user">
+  <img src="../assets/images/icon-project.svg" style="width: 20px; height: 20px;"
+    [routerLink]="['/projectCheckListComponent']" title="Project config" [routerLink]="['/']" class="user">
+</span>
+<div class="orange-line"></div>
+<ng2-toasty [position]="'top-center'"></ng2-toasty>
+<router-outlet></router-outlet>

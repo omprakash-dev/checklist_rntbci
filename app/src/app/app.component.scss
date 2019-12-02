@@ -1,0 +1,105 @@
+.nav-bar {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  height: 82px;
+  margin-bottom: 0;
+}
+
+.orange-line {
+  width: 100%;
+  border-bottom: 3px solid;
+  border-bottom-color: #FF5F00;
+}
+
+.app-logo {
+  width: 40px;
+}
+
+.logo {
+  width: 86px;
+  height: 44px;
+  position: absolute;
+  top: 20px;
+  left: 2%
+}
+
+.test {
+  width: 86px;
+  height: 44px;
+  position: absolute;
+  top: 20px;
+  left: 48%
+}
+
+
+.header{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.user {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/*
+#app {
+  height: 31px;
+  width: 137px;
+  color: #00080F;
+  font-family: Read;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 36px;
+  margin-right: 100px;
+  padding-left: 52px;
+  padding-right: 30px;
+}
+*/
+
+#version {
+  color: #FF5F00;
+}
+
+nav {
+  border-spacing: 100px;
+  margin-left: 53px;
+}
+
+nav a {
+  color: #000000;
+  font-family: Read;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+nav a:hover {
+  color: #FF5F00;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  text-decoration: none;
+  color: #00080F;
+}
+
+nav .active {
+  color: #FF5F00;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  text-decoration: none;
+
+  color: #00080F;
+}
+
+.nav-link-padding {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+

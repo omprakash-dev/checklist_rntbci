@@ -1,0 +1,27 @@
+<span class="span-header">ADD NEW APPLICATION</span>
+<span style="float: right;"><img style="width: 15px; height: 15px; cursor: pointer;"
+        src="../../assets/images/icon-close.svg" alt="" [mat-dialog-close]="true"></span>
+<div class="orange-line"></div>
+
+<mat-card style="margin-top: 10px; min-height: 40px;">
+    <mat-card-content>
+        <label for="Project"> Project</label>
+        <input style="margin-left: 10px; border: 0px solid; border-bottom: 1px solid #cccccc;" type="text"
+            placeholder="Enter the project name" [(ngModel)]="projectName">
+    </mat-card-content>
+    <br>
+    <mat-card-content>
+        <span *ngFor="let item of techList" style="margin-right: 10px;">
+            <mat-checkbox class="example-margin" [value]="item.name" [checked]='item.checked'
+                (change)="onChangeTechSelected($event)">{{item.name}}
+            </mat-checkbox>
+        </span>
+    </mat-card-content>
+</mat-card>
+
+<div style="width: 100%; margin-top: 10px;">
+    <button mat-raised-button style="float: right;" (click)="reset()">Reset</button>
+    <button mat-raised-button [disabled]="!projectName"
+        style="float: right; margin-right: 10px; background-color: #FF5F00; color: #ffffff;"
+        (click)="addAppTechStacks()">{{addButtonName}}</button>
+</div>

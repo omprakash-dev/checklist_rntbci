@@ -1,0 +1,62 @@
+
+
+.card {
+    margin-top: 10px;
+    padding: 10px !important;
+    min-height: 40px !important;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+}
+
+.header{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.test {
+  width: 86px;
+  height: 44px;
+  position: relative;
+  left: 48%
+}
+
+.example-radio-group {
+  flex-direction: row;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+table {
+  width: 100%;
+}
+
+.img-size-25{
+  height: 25px;
+  width: 25px;
+}
+
+.mat-mini-fab {
+  position: fixed !important;
+  left: 95%; 
+  z-index: 999;
+  background-color: #FFCD36 !important;
+}
+
+.mat-mini-fab .mat-button-wrapper {
+  padding: 10px 0px !important;
+}
+
+.my-class .mat-dialog-container{
+  height: 400px;
+  width: 600px;
+  border-radius: 10px;
+  background: lightcyan;
+  color: #039be5;
+}

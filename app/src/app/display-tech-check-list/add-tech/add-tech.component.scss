@@ -1,0 +1,84 @@
+.orange-line {
+  width: 100%;
+  border-bottom: 3px solid;
+  border-bottom-color: #FF5F00;
+}
+
+.span-header{
+    text-align: left;
+    width: 90%;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    display: inline-block;
+    line-height: 1em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.text-font{
+    font-family: Read;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.hr-line {
+  width: 100%;
+  border-bottom: 1px solid;
+  border-bottom-color: #cccccc;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-column-item {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 60% !important;
+  width: 60% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  word-break: break-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.mat-column-percentage {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 25% !important;
+  width: 25% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  word-break: break-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.mat-column-delete {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 15% !important;
+  width: 15% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  word-break: break-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}

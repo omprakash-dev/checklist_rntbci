@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 57.1 (101010) - https://sketch.com -->
+    <title>57B61D4F-5F4C-499F-A80D-19450AB99113</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="11 5 11 11 5 11 5 13 11 13 11 19 13 19 13 13 19 13 19 11 13 11 13 5"></polygon>
+    </defs>
+    <g id="TB008-/-Routing-table" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="TB008-/-Future-/-With-application-date" transform="translate(-809.000000, -187.000000)">
+            <g id="TB008/ajout-actif" transform="translate(41.000000, 157.000000)">
+                <g id="Icon-/-Add-/-Filled" transform="translate(763.000000, 25.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask"></g>
+                    <g id="↳-Icon-Color-✱-/-Color-/-KNAP-black" mask="url(#mask-2)" fill="#ffffff">
+                        <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

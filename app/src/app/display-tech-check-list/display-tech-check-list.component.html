@@ -1,0 +1,112 @@
+<div style="width: 100%; text-align: center; position: relative; margin-top: 10px;" class="header"> Technology Stack
+</div>
+<mat-card style="margin-top: 10px; min-height: 40px;">
+    <mat-card-content>
+        <span *ngIf="techList.length <= 0"> No Data </span>
+        <span *ngFor="let item of techList" style="margin-right: 10px;">
+            <!-- <label for="{{item}}">
+            <input id="{{item}}" [value]='item' type="radio" name="tech" [(ngModel)]="radioSelected"
+                (click)="filter4Tech(item)">
+            {{item}}
+        </label> -->
+            <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+                [(ngModel)]="radioSelected" (click)="filter4Tech(item)">
+                <mat-radio-button class="example-radio-button" [value]="item">
+                    {{item}}
+                </mat-radio-button>
+            </mat-radio-group>
+
+            <!-- <mat-radio-group style="margin-left: 20px;" *ngFor="let item of techList">
+            <mat-radio-button value="item">{{item}}</mat-radio-button>
+        </mat-radio-group> -->
+        </span>
+        <button class="fab-button bg-yellow" mat-mini-fab (click)="openDialog(true)">
+            <img src="../../assets/images/icon-plus.svg" class="img-size-25">
+        </button>
+
+    </mat-card-content>
+</mat-card>
+
+<mat-card style="margin-top: 10px;" *ngIf="selectCheckList">
+    <mat-card-content>
+        <!-- <button style="margin-right: 20px;"> Add New Tech</button>
+    <button> Edit Existing Tech</button> -->
+        <span class="test header"> {{radioSelected}} </span>
+        <span style="float: right;"><img style="width: 20px; height: 20px; margin-right: 20px; cursor: pointer;"
+                src="../../assets/images/icon-edit.svg" alt="" (click)="openDialog(false)"></span>
+        <div style="display: flex; margin-top: 40px;">
+            <div style="width: 49%; min-height: 390px; max-height: 390px; overflow: auto;">
+                <!-- <table style="width: 100%; border: 1px solid #cccccc;">
+            <thead>
+                <th style="width: 50%; border-right: 1px solid #cccccc;">Do's</th>
+                <th style="width: 50%;">Percentage</th>
+            </thead>
+            <tbody *ngFor="let dosItem of dos">
+                <tr style="border-top: 1px solid #cccccc;">
+                    <td style="border-right: 1px solid #cccccc;">{{dosItem.item}}</td>
+                    <td>{{dosItem.percentage}}</td>
+                </tr>
+            </tbody>
+        </table> -->
+
+                <table mat-table [dataSource]="dos" class="mat-elevation-z8">
+
+                    <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="item">
+                        <th mat-header-cell *matHeaderCellDef> Do's </th>
+                        <td mat-cell *matCellDef="let element"> {{element.list}} </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="percentage">
+                        <th mat-header-cell *matHeaderCellDef> Percentage </th>
+                        <td mat-cell *matCellDef="let element"> {{element.percentage}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns sticky: true"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+            </div>
+            <div style="width: 49%; margin-left: 2%; min-height: 390px; max-height: 390px; overflow: auto;">
+                <!-- <table style="width: 100%; border: 1px solid #cccccc;">
+            <thead style="border: 1px solid #cccccc;">
+                <th style="width: 50%; border-right: 1px solid #cccccc;">Dont's</th>
+                <th style="width: 50%;">Percentage</th>
+            </thead>
+            <tbody *ngFor="let dontsItem of donts">
+                <tr style="border-top: 1px solid #cccccc;">
+                    <td style="border-right: 1px solid #cccccc;">{{dontsItem.item}}</td>
+                    <td>{{dontsItem.percentage}}</td>
+                </tr>
+            </tbody>
+        </table> -->
+
+                <table mat-table [dataSource]="donts" class="mat-elevation-z8">
+
+                    <!--- Note that these columns can be defined in any order.
+                        The actual rendered columns are set as a property on the row definition" -->
+
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="item">
+                        <th mat-header-cell *matHeaderCellDef> Dont's </th>
+                        <td mat-cell *matCellDef="let element"> {{element.list}} </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="percentage">
+                        <th mat-header-cell *matHeaderCellDef> Percentage </th>
+                        <td mat-cell *matCellDef="let element"> {{element.percentage}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns sticky: true"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
+<svg  viewBox="0 0 86 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Alliance icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="main-menu/closed" transform="translate(-678.000000, -19.000000)">
+            <g id="menu-closed-grid-1200-px-more" transform="translate(0.000000, 1.000000)">
+                <g id="Group">
+                    <g id="Alliance-icon" transform="translate(667.000000, 15.000000)">
+                        <g id="svg" transform="translate(11.000000, 3.000000)">
+                            <g id="Group">
+                                <path d="M0.383,42.15 L0.384,42.15 C2.88697725,42.8381924 5.47113725,43.1866487 8.067,43.186 C27.381,43.186 43.037,24.023 43.037,0.384" id="Shape" stroke="#EA001B" stroke-linejoin="round"></path>
+                                <path d="M85.69,42.149 C73.885,33.039 59.093,27.621 43.037,27.621 C26.981,27.621 12.188,33.039 0.383,42.15" id="Shape" stroke="#FF5F00"></path>
+                                <path d="M43.037,0.384 C43.037,24.024 58.694,43.186 78.007,43.186 C80.648,43.186 85.691,42.15 85.691,42.15" id="Shape" stroke="#FFB300"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
